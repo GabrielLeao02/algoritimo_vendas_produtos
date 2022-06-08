@@ -5,7 +5,7 @@ import './modelos/venda.dart';
 
 main() {
   var venda = Venda(
-    cliente: Cliente(nome: 'Gabriel', cpf: '878-551-000-91'),
+    cliente: Cliente(nome: 'teste', cpf: '000-000-000-00'),
     itens: <Item>[
       Item(
           produto: Produto(
@@ -15,8 +15,9 @@ main() {
           produto: Produto(
               nome: 'iphone', codigo: 23, valor: 3000.00, desconto: 0.30),
           quantidade: 1),
-
     ],
   );
-  print('O valor total de vendas e de R\$${venda.valorTotal}.');
+  
+  print(
+      'cliente ${venda.cliente.nome} de cpf: ${venda.cliente.cpf} teve sua compra efetuada com valor total de R\$${venda.valorTotal}.');
 }
